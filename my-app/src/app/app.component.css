@@ -1,0 +1,55 @@
+.dispGrid { 
+    display: grid;
+    grid-template-areas: 
+        "head head head head"
+        "inv op1 op op2"
+        "submit submit submit submit"
+        "res res res res"
+        "err err err err"; 
+    grid-template-columns: 3% 35% 3% 35%;
+    grid-template-rows: 85px 1fr 75px; 
+    grid-row-gap: 10px;
+    grid-column-gap: 8px;
+    height: 100vh;
+    margin: 0;
+}  
+@media screen and (max-width: 768px) {
+    .dispGrid { 
+    grid-template-areas: 
+        "head"
+        "inv"
+        "op1"
+        "op"
+        "op2"
+        "submit"
+        "res"
+        "err";
+    grid-template-columns: 1fr;
+    grid-template-rows: 124px 20px 1fr 70px 1fr 70px;
+   }
+}
+.inv{
+    grid-area: inv;
+}
+.pageHead {
+    grid-area: head;
+    text-align: center;
+}
+.first {
+    grid-area: op1;
+}
+.operator { 
+    grid-area: op;      
+}
+.second { 
+    grid-area: op2; 
+}
+.submit { 
+    grid-area: submit; 
+} 
+.result { 
+    grid-area: res; 
+} 
+.error { 
+    grid-area: err;
+}
